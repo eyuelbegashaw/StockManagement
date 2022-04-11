@@ -1,0 +1,51 @@
+.navbars
+{
+   margin-left:5px;
+   width:120px;
+   height: 100vh;
+}
+
+#consigneeLinks
+{
+  font-size: 15px;
+
+}
+
+.consigneeDropDown
+{
+  display: none;
+}
+
+.container 
+{
+  display: 100%;
+}
+
+
+@media only screen and (max-width: 576px) {
+  hr {
+    display:none;
+  }
+  .navbars
+  {
+    height: auto;
+    width:99%;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .consignee{
+    display: none;
+  }
+
+  .consigneeDropDown
+  {
+    margin:0px;
+    display: block;
+  }
+  #transactionNav{ 
+    grid-template-columns: repeat(2 , 1fr);
+  }
+}
