@@ -3,7 +3,7 @@ const MaintainanceNav = ()=>
 {
     return (
         <>
-      <div className="d-sm-flex justify-content-between">
+      <div className="d-sm-flex">
       <section className="bg-dark text-light">
             <div className="d-sm-flex flex-column border border-light p-1 navbars">
             <Link to="/element" className='text-decoration-none mb-2 text-warning fs-6'> Element</Link> <hr />
