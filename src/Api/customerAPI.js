@@ -26,14 +26,9 @@ export const updateData = async (code , update) => {
 }
 
 export const readData = async () => {
-   const data = await fetch('https://localhost:5001/api/Consignee/GetAll/');
-       if(!data) console.log("nothing");
-    console.log("show me sth are be allah");
-   console.log(data);
-   const res = await data.json()
-   console.log(res);
-   return res.lists;
-    
+       const data = await fetch('https://localhost:5001/api/Consignee/GetAll/');
+       const res = await data.json()
+       return res.lists;
 }
 
 
