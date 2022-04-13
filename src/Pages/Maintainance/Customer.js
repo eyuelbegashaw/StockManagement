@@ -12,7 +12,7 @@ import Alert from "../../Components/Alert";
 
 const Customer = () => {
     const [inputs , setInputs] = useState({
-        code:"" , remark:"" , type:"consigneeRef" ,
+        code:"" , remark:"" , type:"customer" ,
         active: "true" , name:"" , tradeName:"" ,
         businessType:""
     }); //holds form inputs state

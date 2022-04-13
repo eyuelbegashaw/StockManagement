@@ -1,11 +1,20 @@
-import {Link , Outlet } from 'react-router-dom';
+import { useEffect } from 'react';
+import {NavLink , Outlet , useNavigate } from 'react-router-dom';
 
-const headerNav = () =>  {   
+const HeaderNav = () =>  {
+  
+      let navigate = useNavigate();
+      useEffect(()=>
+      {
+        navigate('/maintainance')
+      } , [])
+      
+      
      return (
       <>
          <nav className="navbar navbar-expand-sm bg-dark navbar-dark py-3">  
          <div className="container-fluid">
-         <Link to="/" className="navbar-brand mx-0">Stock Management</Link>
+         <NavLink to="/maintainance" className="navbar-brand mx-0 text-white h3 brand">Stock Management</NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -18,10 +27,10 @@ const headerNav = () =>  {
           <div className="collapse navbar-collapse ms-auto" id="navmenu">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link to="/" className="nav-link">Maintainance</Link>
+                <NavLink to="/maintainance" className="mx-3" >Maintainance</NavLink>
               </li>
               <li className="nav-item">
-                <Link to="/transaction" className="nav-link">Transaction</Link>
+                <NavLink to="/transaction" className="mx-3">Transaction</NavLink>
               </li>
             </ul>
           </div>
@@ -32,4 +41,4 @@ const headerNav = () =>  {
       </>
      );
 } 
-export default headerNav;
+export default HeaderNav;

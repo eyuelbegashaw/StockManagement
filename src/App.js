@@ -24,7 +24,7 @@ function App() {
     <Routes>
         <Route path="/" element= { <HeaderNav/> } >
 
-          <Route path="" element= { <MaintainanceNav /> } >
+          <Route path="/maintainance" element= { <MaintainanceNav /> } >
             <Route index element={ <h1  className="mx-auto my-5 ">Select Maintainance</h1>} />
             <Route path="element" element={ <Element />} />
             <Route path="employee" element={ <Employee />} />

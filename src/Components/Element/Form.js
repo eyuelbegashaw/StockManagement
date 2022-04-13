@@ -14,7 +14,7 @@ const Form = ({handleSubmit , handleChange , inputs , edit}) => {
 
             <div className="col">
                 <select className="form-select disabled" name="type" value={inputs.type} onChange={ (e)=>handleChange(e) } >
-                    <option value="consigneeRef">ConsigneeRef</option>
+                    <option value="consigneeRef">elementRef</option>
                 </select>
             </div>
         </div>
@@ -28,17 +28,17 @@ const Form = ({handleSubmit , handleChange , inputs , edit}) => {
             </div>
             
             <div className="col">
-              <input className="form-control" placeholder="Name" type="text"  name="name" value={inputs.name} onChange={ (e)=>handleChange(e) }/>
+              <input className="form-control" placeholder="uom" type="text"  name="uom" value={inputs.uom} onChange={ (e)=>handleChange(e) }/>
             </div>
 
             <div className="col">
-              <input className="form-control" placeholder="TradeName" type="text" name="tradeName" value={inputs.tradeName}  onChange={ (e)=>handleChange(e) }/>
+              <input className="form-control" placeholder="Description" type="text" name="description" value={inputs.description}  onChange={ (e)=>handleChange(e) }/>
             </div> 
         </div>
 
           <div className="row">
             <div className="col-4 mb-3" >
-            <input className="form-control" placeholder="BusinessType"  type="text"  name="businessType"  value={inputs.businessType}  onChange={ (e)=>handleChange(e) } />
+            <input className="form-control" placeholder="Group"  type="text"  name="group"  value={inputs.group}  onChange={ (e)=>handleChange(e) } />
             </div>
           </div>
       

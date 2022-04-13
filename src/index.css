@@ -20,6 +20,20 @@
 {
   display: 100%;
 }
+a{
+  text-decoration: none;
+  color:white;
+  font-size:18px;
+}
+a.active
+{
+  color:rgb(185, 185, 15);
+  font-weight: bold;
+}
+.brand
+{
+  font-weight: bold;
+}
 
 
 @media only screen and (max-width: 576px) {
