@@ -14,7 +14,7 @@ const Employee = () =>
 {
     const [alert , setAlert] = useState({show:false , type:"" , text:""});
     const [datas, setDatas] = useState([]);
-    const [editCode , setEditCode] = useState("");
+    const [editCode , setEditCode] = useState("choose");
     const [edit , setEdit] = useState(false);
     const [inputs , setInputs] = useState({
          code:""  , remark:"" , active:"false" , type:"" ,
@@ -45,6 +45,12 @@ const Employee = () =>
             setEditCode(e.target.value);
             setEdit(true);
             setInputs(datas.find( (value) => value.code === e.target.value));
+        }
+        else
+        {
+            setEditCode("choose");
+            setEdit(false);
+
         }
      
     }
@@ -126,7 +132,7 @@ const Employee = () =>
     //handle Delete button
     const handleDelete = async ()=>
     {
-        if(editCode !== "")
+        if(editCode !== "choose")
         {
             const res = await employeeAPI.deleteData(editCode)
             .then((res)=> handleAlert({type:"success" , text:`Code ${editCode} deleted successfully`}));

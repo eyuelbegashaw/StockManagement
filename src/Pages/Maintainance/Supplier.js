@@ -1,7 +1,9 @@
+import Consignee from "../../Components/Consignee/Consignee";
+
 const Supplier = ()=>
 {
     return (
-        <h1 className="mx-auto my-5">Supplier page working</h1>
+        <Consignee consigneeType = "supplier" />
     );
 }
 export default Supplier;

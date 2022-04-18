@@ -13,8 +13,8 @@ const Form = ({handleSubmit , handleChange , inputs , edit}) => {
             </div> 
 
             <div className="col">
-                <select className="form-select disabled" name="type" value={inputs.type} onChange={ (e)=>handleChange(e) } >
-                    <option value="consigneeRef">ConsigneeRef</option>
+                <select className="form-select" name="type" value={inputs.type} onChange={ (e)=>handleChange(e) } >
+                    <option value={inputs.type}>{inputs.type}</option>
                 </select>
             </div>
         </div>

@@ -8,7 +8,6 @@ import TransactionNav from './Layout/TransactionNav';
 //Maintance Pages
 import Element from './Pages/Maintainance/Element';
 import Employee from './Pages/Maintainance/Employee';
-import Consignee from './Pages/Maintainance/Consignee';
 import Supplier from './Pages/Maintainance/Supplier';
 import Customer from './Pages/Maintainance/Customer';
 
@@ -28,9 +27,11 @@ function App() {
             <Route index element={ <h1  className="mx-auto my-5 ">Select Maintainance</h1>} />
             <Route path="element" element={ <Element />} />
             <Route path="employee" element={ <Employee />} />
-            <Route path="consignee" element={ <Consignee />} />
-            <Route path="customer" element={ <Customer />} />
-            <Route path="supplier" element={ <Supplier />} />
+            <Route path="consignee" element={<h1  className="mx-auto my-5 ">Select Consignee Type</h1>} />
+            <Route path="consignee/customer" element={ <Customer />} />
+            <Route path="consignee/supplier" element={ <Supplier />} />
+        
+           
           </Route>
 
           <Route path="transaction" element={ <TransactionNav/>} >

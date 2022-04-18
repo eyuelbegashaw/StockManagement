@@ -1,7 +1,9 @@
+import Transaction from "../../Components/Transaction/Transaction";
+
 const CashGood = () => {
-     return(
-         <h1 className="mx-auto my-5">Cash good page working</h1>
-     )
+    return(
+        <Transaction transactionType= "CashGoodReceived"/>
+    )
 }
 
 export default CashGood;
