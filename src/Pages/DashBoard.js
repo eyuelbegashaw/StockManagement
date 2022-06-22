@@ -1,9 +1,8 @@
-import Consignee from "../../Components/Consignee/Consignee";
-import { userContext } from "../../Context/GlobalState";
 import { useEffect, useContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { userContext } from "../Context/GlobalState";
 
-const Customer = () => {
+const DashBoard = () => {
   const { user, setUser } = useContext(userContext);
   const didMount = useRef(false);
   const navigate = useNavigate();
@@ -16,7 +15,7 @@ const Customer = () => {
     } else didMount.current = true;
   }, [user]);
 
-  return <Consignee consigneeType="customer" />;
+  return <button className="button btn btn-success mt-4">Login</button>;
 };
 
-export default Customer;
+export default DashBoard;
